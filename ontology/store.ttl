@@ -1,0 +1,446 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>.
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#>.
+@prefix edu: <file:///C:/Users/vlada/Desktop/Faks/SW/source/ontology/ontology.ttl#>.
+
+# Individuals
+
+# Universities
+edu:UnviersityOfBelgrade rdf:type edu:University ;
+    edu:isNamed "Univerzitet u Beogradu" ;
+    edu:isInCity "Beograd" ;
+    edu:isInCountry "Serbia" .
+
+
+edu:UniversityOfNoviSad rdf:type edu:University ;
+    edu:isNamed "Univerzitet u Novom Sadu" ;
+    edu:isInCity "Novi Sad" ;
+    edu:isInCountry "Serbia" .
+
+
+edu:UniversityOfNis rdf:type edu:University ;
+    edu:isNamed "Univerzitet u Nisu" ;
+    edu:isInCity "Nis" ;
+    edu:isInCountry "Serbia" .
+
+
+# Knowledge Areas
+edu:Economics rdf:type edu:KnowledgeArea ;
+    edu:isNamed "Economics" .
+
+
+edu:Finance rdf:type edu:KnowledgeArea ;
+    edu:isNamed "Finance" .
+
+
+edu:Management rdf:type edu:KnowledgeArea;
+    edu:isNamed "Management" .
+
+
+edu:ComputerScience rdf:type edu:KnowledgeArea ;
+    edu:isNamed "Computer Science" .
+
+
+edu:Electronics rdf:type edu:KnowledgeArea ;
+    edu:isNamed "Electronics" .
+
+
+edu:Mathematics rdf:type edu:KnowledgeArea ;
+    edu:isNamed "Mathematics" .
+
+
+edu:NaturalSciences rdf:type edu:KnowledgeArea ;
+    edu:isNamed "Natural Sciences" .
+
+
+edu:SoftwareEngineering rdf:type edu:KnowledgeArea ;
+    edu:isNamed "Software Engineering" .
+
+
+edu:ElectricalEngineering rdf:type edu:KnowledgeArea ;
+    edu:isNamed "Electrical Engineering" .
+
+
+edu:DatabaseEngineering rdf:type edu:KnowledgeArea ;
+    edu:isNamed "Database Engineering" .
+
+
+edu:ArtificialIntelligence rdf:type edu:KnowledgeArea ;
+    edu:isNamed "Artificial Intelligence" .
+
+
+edu:SoftwareArchitecture rdf:type edu:KnowledgeArea ;
+    edu:isNamed "Software Architecture" .
+
+
+edu:ComputerGraphics rdf:type edu:KnowledgeArea ;
+    edu:isNamed "Computer Graphics" .
+
+
+edu:CyberSecurity rdf:type edu:KnowledgeArea ;
+    edu:isNamed "Cyber Security" .
+
+
+edu:BackendEngineering rdf:type edu:KnowledgeArea ;
+    edu:isNamed "Backend Engineering" .
+
+
+edu:FrontendEngineering rdf:type edu:KnowledgeArea ;
+    edu:isNamed "Frontend Engineering" .
+
+
+edu:Automation rdf:type edu:KnowledgeArea ;
+    edu:isNamed "Automation" .
+
+
+edu:RuleBasedSystems rdf:type edu:KnowledgeArea ;
+    edu:isNamed "Rule Based Systems" .
+
+
+edu:SoftwareAgents rdf:type edu:KnowledgeArea ;
+    edu:isNamed "Software Agents" .
+
+
+edu:KnowledgeEngineering rdf:type edu:KnowledgeArea ;
+    edu:isNamed "KnowledgeEngineering" .
+
+
+edu:InformationSystems rdf:type edu:KnowledgeArea ;
+    edu:isNamed "InformationSystems" .
+
+
+edu:Microservices rdf:type edu:KnowledgeArea ;
+    edu:isNamed "Microservices" .
+
+
+edu:Astronomy rdf:type edu:KnowledgeArea ;
+    edu:isNamed "Astronomy" .
+
+
+edu:Astrophysics rdf:type edu:KnowledgeArea ;
+    edu:isNamed "Astrophysics" .
+
+
+# Faculties
+edu:FacultyOfElectricalEngineeringBelgrade rdf:type edu:Faculty ;
+    edu:isNamed "Elektrotehnicki fakultet u Beogradu" ;
+    edu:isOnStreet "Bulevar kralja Aleksandra 73" ;
+    edu:FacultyisPartOf edu:UnviersityOfBelgrade ;
+    edu:FacultyTeaches edu:ComputerScience ;
+    edu:FacultyTeaches edu:Electronics ;
+    edu:FacultyTeaches edu:ElectricalEngineering .
+
+
+edu:FacultyOfMathematicsBelgrade rdf:type edu:Faculty ;
+    edu:isNamed "Matematicki fakultet u Beogradu" ;
+    edu:isOnStreet "Studentski trg 16" ;
+    edu:FacultyisPartOf edu:UnviersityOfBelgrade ;
+    edu:FacultyTeaches edu:Mathematics ;
+    edu:FacultyTeaches edu:ComputerScience ;
+    edu:FacultyTeaches edu:Astronomy ;
+    edu:FacultyTeaches edu:Astrophysics .
+
+
+edu:FacultyOfEconomicsBelgrade rdf:type edu:Faculty ;
+    edu:isNamed "Ekonomski fakultet u Beogradu" ;
+    edu:isOnStreet "Kamenicka 6" ;
+    edu:FacultyisPartOf edu:UnviersityOfBelgrade ;
+    edu:FacultyTeaches edu:Economics .
+
+
+edu:FacultyOfTechnicalSciencesNoviSad rdf:type edu:Faculty ;
+    edu:isNamed "Fakultet tehnickih nauka u Novom Sadu" ;
+    edu:isOnStreet "Trg Dositeja Obradovica 6" ;
+    edu:FacultyisPartOf edu:UniversityOfNoviSad ;
+    edu:FacultyTeaches edu:ComputerScience ;
+    edu:FacultyTeaches edu:Electronics ;
+    edu:FacultyTeaches edu:ElectricalEngineering .
+
+
+edu:FacultyOfNaturalSciencesAndMathematicsNoviSad rdf:type edu:Faculty ;
+    edu:isNamed "Prirodno-matematicki fakultet u Novom Sadu" ;
+    edu:isOnStreet "Trg Dositeja Obradovica 3" ;
+    edu:FacultyisPartOf edu:UniversityOfNoviSad ;
+    edu:FacultyTeaches edu:ComputerScience ;
+    edu:FacultyTeaches edu:Mathematics ;
+    edu:FacultyTeaches edu:NaturalSciences .
+
+
+edu:FacultyOfEconomicsNoviSad rdf:type edu:Faculty ;
+    edu:isNamed "Ekonomski fakultet u Novom Sadu" ;
+    edu:isOnStreet "Dr Sime Milosevica 16" ;
+    edu:FacultyisPartOf edu:UniversityOfNoviSad ;
+    edu:FacultyTeaches edu:Economics .
+
+
+edu:FacultyOfElectronicEngineeringNis rdf:type edu:Faculty ;
+    edu:isNamed "Elektronski fakultet u Nisu" ;
+    edu:isOnStreet "Aleksandra Medvedeva 14" ;
+    edu:FacultyisPartOf edu:UniversityOfNis ;
+    edu:FacultyTeaches edu:ComputerScience ;
+    edu:FacultyTeaches edu:Electronics .
+
+
+edu:FacultyOfNaturalSciencesAndMathematicsNis rdf:type edu:Faculty ;
+    edu:isNamed "Prirodno-matematicki fakultet u Nisu" ;
+    edu:isOnStreet "Visegradska 33" ;
+    edu:FacultyisPartOf edu:UniversityOfNis ;
+    edu:FacultyTeaches edu:ComputerScience ;
+    edu:FacultyTeaches edu:Mathematics ;
+    edu:FacultyTeaches edu:NaturalSciences .
+
+
+edu:FacultyOfEconomicsNis rdf:type edu:Faculty ;
+    edu:isNamed "Ekonomski fakultet u Novom Sadu" ;
+    edu:isOnStreet "Dr Sime Milosevica 16" ;
+    edu:FacultyisPartOf edu:UniversityOfNis ;
+    edu:FacultyTeaches edu:Economics .
+
+
+# Departments
+edu:ElectricalEngineeringAndComputerScienceETFBF rdf:type edu:Department ;
+    edu:isNamed "Elektrotehnika i racunarstvo" ;
+    edu:hasScholarshipStudents 400 ;
+    edu:hasSelfFinancingStudents 140 ;
+    edu:hasTuition 126000 ;
+    edu:hasDuration 4 ;
+    edu:DepartmentisPartOf edu:FacultyOfElectricalEngineeringBelgrade ;
+    edu:DepartmentTeaches edu:ComputerScience ;
+    edu:DepartmentTeaches edu:Electronics ;
+    edu:DepartmentTeaches edu:ElectricalEngineering .
+
+
+edu:SoftwareEngineeringETFBG rdf:type edu:Department ;
+    edu:isNamed "Softversko Inzenjerstvo" ;
+    edu:hasScholarshipStudents 30 ;
+    edu:hasSelfFinancingStudents 150 ;
+    edu:hasTuition 126000 ;
+    edu:hasDuration 4 ;
+    edu:DepartmentisPartOf edu:FacultyOfElectricalEngineeringBelgrade ;
+    edu:DepartmentTeaches edu:ComputerScience .
+
+
+edu:MathematicsMATFBG rdf:type edu:Department ;
+    edu:isNamed "Matematika" ;
+    edu:hasScholarshipStudents 205 ;
+    edu:hasSelfFinancingStudents 45 ;
+    edu:hasTuition 141000 ;
+    edu:hasDuration 4 ;
+    edu:DepartmentisPartOf edu:FacultyOfMathematicsBelgrade ;
+    edu:DepartmentTeaches edu:Mathematics .
+
+
+edu:AstronomyAstrophysicsMATFBG rdf:type edu:Department ;
+    edu:isNamed "Astronomija i Astrofizika" ;
+    edu:hasScholarshipStudents 20 ;
+    edu:hasSelfFinancingStudents 5 ;
+    edu:hasTuition 135000 ;
+    edu:hasDuration 4 ;
+    edu:DepartmentisPartOf edu:FacultyOfMathematicsBelgrade ;
+    edu:DepartmentTeaches edu:Astronomy ;
+    edu:DepartmentTeaches edu:Astrophysics .
+
+
+edu:EconomicsBusinessAndStatisticsEKOFBG rdf:type edu:Department ;
+    edu:isNamed "Ekonomija, poslovno upravljanje i statistika" ;
+    edu:hasScholarshipStudents 610 ;
+    edu:hasSelfFinancingStudents 710 ;
+    edu:hasTuition 139754 ;
+    edu:hasDuration 4 ;
+    edu:DepartmentisPartOf edu:FacultyOfEconomicsBelgrade ;
+    edu:DepartmentTeaches edu:Economics ;
+    edu:DepartmentTeaches edu:Finance ;
+    edu:DepartmentTeaches edu:Mathematics ;
+    edu:DepartmentTeaches edu:Management .
+
+
+edu:ComputerScienceAndAutomationFTNNS rdf:type edu:Department ;
+    edu:isNamed "Racunarstvo i automatika" ;
+    edu:hasScholarshipStudents 190 ;
+    edu:hasSelfFinancingStudents 50 ;
+    edu:hasTuition 120000 ;
+    edu:hasDuration 4 ;
+    edu:DepartmentisPartOf edu:FacultyOfTechnicalSciencesNoviSad ;
+    edu:DepartmentTeaches edu:ComputerScience ;
+    edu:DepartmentTeaches edu:ElectricalEngineering .
+
+
+edu:EnergeticsElectroincsAndTelecommunicatoinsFTNNS rdf:type edu:Department ;
+    edu:isNamed "Energetika, elektronika i telekomunikacije" ;
+    edu:hasScholarshipStudents 160 ;
+    edu:hasSelfFinancingStudents 80 ;
+    edu:hasTuition 120000 ;
+    edu:hasDuration 4 ;
+    edu:DepartmentisPartOf edu:FacultyOfTechnicalSciencesNoviSad ;
+    edu:DepartmentTeaches edu:ComputerScience ;
+    edu:DepartmentTeaches edu:ElectricalEngineering ;
+    edu:DepartmentTeaches edu:Electronics .
+
+
+edu:MathematicsPMFNS rdf:type edu:Department ;
+    edu:isNamed "Matematika" ;
+    edu:hasScholarshipStudents 60 ;
+    edu:hasSelfFinancingStudents 30 ;
+    edu:hasTuition 118000 ;
+    edu:hasDuration 3 ;
+    edu:DepartmentisPartOf edu:FacultyOfNaturalSciencesAndMathematicsNoviSad ;
+    edu:DepartmentTeaches edu:Mathematics .
+
+
+edu:ComputerSciencePMFNS rdf:type edu:Department ;
+    edu:isNamed "Informacione tehnologije" ;
+    edu:hasScholarshipStudents 60 ;
+    edu:hasSelfFinancingStudents 30 ;
+    edu:hasTuition 96000 ;
+    edu:hasDuration 3 ;
+    edu:DepartmentisPartOf edu:FacultyOfNaturalSciencesAndMathematicsNoviSad ;
+    edu:DepartmentTeaches edu:ComputerScience ;
+    edu:DepartmentTeaches edu:Mathematics .
+
+
+edu:EconomicsEKOFNS rdf:type edu:Department ;
+    edu:isNamed "Ekonomija" ;
+    edu:hasScholarshipStudents 79 ;
+    edu:hasSelfFinancingStudents 245 ;
+    edu:hasTuition 240000 ;
+    edu:hasDuration 4 ;
+    edu:DepartmentisPartOf edu:FacultyOfEconomicsNoviSad ;
+    edu:DepartmentTeaches edu:Economics ;
+    edu:DepartmentTeaches edu:Finance ;
+    edu:DepartmentTeaches edu:Mathematics ;
+    edu:DepartmentTeaches edu:Management .
+
+
+edu:BusinessInformaticsEKOFNS rdf:type edu:Department ;
+    edu:isNamed "Poslovna informatika" ;
+    edu:hasScholarshipStudents 79 ;
+    edu:hasSelfFinancingStudents 245 ;
+    edu:hasTuition 240000 ;
+    edu:hasDuration 4 ;
+    edu:DepartmentisPartOf edu:FacultyOfEconomicsNoviSad ;
+    edu:DepartmentTeaches edu:ComputerScience ;
+    edu:DepartmentTeaches edu:Economics ;
+    edu:DepartmentTeaches edu:Management ;
+    edu:DepartmentTeaches edu:Finance .
+
+
+edu:ElectricalEngineeringAndComputerScienceELFAKNI rdf:type edu:Department ;
+    edu:isNamed "Elektrotehnika i racunarstvo" ;
+    edu:hasScholarshipStudents 190 ;
+    edu:hasSelfFinancingStudents 50 ;
+    edu:hasTuition 120000 ;
+    edu:hasDuration 4 ;
+    edu:DepartmentisPartOf edu:FacultyOfElectronicEngineeringNis ;
+    edu:DepartmentTeaches edu:ComputerScience ;
+    edu:DepartmentTeaches edu:ElectricalEngineering ;
+    edu:DepartmentTeaches edu:Electronics .
+
+
+edu:MathematicsPMFNI rdf:type edu:Department ;
+    edu:isNamed "Matematika" ;
+    edu:hasScholarshipStudents 20 ;
+    edu:hasSelfFinancingStudents 16 ;
+    edu:hasTuition 75000 ;
+    edu:hasDuration 4 ;
+    edu:DepartmentisPartOf edu:FacultyOfNaturalSciencesAndMathematicsNis ;
+    edu:DepartmentTeaches edu:Mathematics .
+
+
+edu:ComputerSciencePMFNI rdf:type edu:Department ;
+    edu:isNamed "Racunarske nauke" ;
+    edu:hasScholarshipStudents 25 ;
+    edu:hasSelfFinancingStudents 11 ;
+    edu:hasTuition 75000 ;
+    edu:hasDuration 4 ;
+    edu:DepartmentisPartOf edu:FacultyOfNaturalSciencesAndMathematicsNis ;
+    edu:DepartmentTeaches edu:ComputerScience .
+
+
+edu:EconomicsEKOFNI rdf:type edu:Department ;
+    edu:isNamed "Ekonomija" ;
+    edu:hasScholarshipStudents 332 ;
+    edu:hasSelfFinancingStudents 105 ;
+    edu:hasTuition 90000 ;
+    edu:hasDuration 4 ;
+    edu:DepartmentisPartOf edu:FacultyOfEconomicsNis ;
+    edu:DepartmentTeaches edu:Economics ;
+    edu:DepartmentTeaches edu:Finance ;
+    edu:DepartmentTeaches edu:Management .
+
+
+# Concentrations
+edu:FTNE2PRNII rdf:type edu:Concentration ;
+    edu:isNamed "Primenjene racunarske nauke i informatika" ;
+    edu:hasNrOfStudents 120 ;
+    edu:hasCalling "Diplomirani inzenjer elektrotehnike i racunarstva" ;
+    edu:ConcentrationisPartOf edu:ComputerScienceAndAutomationFTNNS ;
+    edu:ConcentrationTeaches edu:SoftwareEngineering ;
+    edu:ConcentrationTeaches edu:SoftwareArchitecture ;
+    edu:ConcentrationTeaches edu:ArtificialIntelligence ;
+    edu:ConcentrationTeaches edu:DatabaseEngineering ;
+    edu:ConcentrationTeaches edu:FrontendEngineering ;
+    edu:ConcentrationTeaches edu:BackendEngineering .
+
+
+edu:FTNE2RTRK rdf:type edu:Concentration ;
+    edu:isNamed "Racunarska tehnika i racunarske komunikacije" ;
+    edu:hasNrOfStudents 90 ;
+    edu:hasCalling "Diplomirani inzenjer elektrotehnike i racunarstva" ;
+    edu:ConcentrationisPartOf edu:ComputerScienceAndAutomationFTNNS ;
+    edu:ConcentrationTeaches edu:SoftwareEngineering ;
+    edu:ConcentrationTeaches edu:ElectricalEngineering ;
+    edu:ConcentrationTeaches edu:Electronics ;
+    edu:ConcentrationTeaches edu:BackendEngineering .
+
+
+edu:FTNE2AUTO rdf:type edu:Concentration ;
+    edu:isNamed "Automatika" ;
+    edu:hasNrOfStudents 30 ;
+    edu:hasCalling "Diplomirani inzenjer elektrotehnike i racunarstva" ;
+    edu:ConcentrationisPartOf edu:ComputerScienceAndAutomationFTNNS ;
+    edu:ConcentrationTeaches edu:SoftwareEngineering ;
+    edu:ConcentrationTeaches edu:Automation ;
+    edu:ConcentrationTeaches edu:Electronics ;
+    edu:ConcentrationTeaches edu:Mathematics .
+
+
+edu:FTNE2PRNIIPI rdf:type edu:Concentration ;
+    edu:isNamed "Poslovna Informatika" ;
+    edu:hasNrOfStudents 120 ;
+    edu:hasCalling "Diplomirani inzenjer elektrotehnike i racunarstva" ;
+    edu:ConcentrationContinues edu:FTNE2PRNII ;
+    edu:ConcentrationTeaches edu:Microservices ;
+    edu:ConcentrationTeaches edu:InformationSystems ;
+    edu:ConcentrationTeaches edu:KnowledgeEngineering ;
+    edu:ConcentrationTeaches edu:CyberSecurity .
+
+
+edu:FTNE2PRNIISW rdf:type edu:Concentration ;
+    edu:isNamed "Softversko Inzenjerstvo" ;
+    edu:hasNrOfStudents 120 ;
+    edu:hasCalling "Diplomirani inzenjer elektrotehnike i racunarstva" ;
+    edu:ConcentrationContinues edu:FTNE2PRNII ;
+    edu:ConcentrationTeaches edu:Microservices ;
+    edu:ConcentrationTeaches edu:SoftwareArchitecture ;
+    edu:ConcentrationTeaches edu:SoftwareEngineering .
+
+
+edu:FTNE2PRNIIBP rdf:type edu:Concentration ;
+    edu:isNamed "Informacioni Sistemi" ;
+    edu:hasNrOfStudents 120 ;
+    edu:hasCalling "Diplomirani inzenjer elektrotehnike i racunarstva" ;
+    edu:ConcentrationContinues edu:FTNE2PRNII ;
+    edu:ConcentrationTeaches edu:Microservices ;
+    edu:ConcentrationTeaches edu:DatabaseEngineering ;
+    edu:ConcentrationTeaches edu:InformationSystems ;
+    edu:ConcentrationTeaches edu:KnowledgeEngineering .
+
+
+edu:FTNE2PRNIIIS rdf:type edu:Concentration ;
+    edu:isNamed "Inteligentni sistemi" ;
+    edu:hasNrOfStudents 120 ;
+    edu:hasCalling "Diplomirani inzenjer elektrotehnike i racunarstva" ;
+    edu:ConcentrationContinues edu:FTNE2PRNII ;
+    edu:ConcentrationTeaches edu:Microservices ;
+    edu:ConcentrationTeaches edu:RuleBasedSystems ;
+    edu:ConcentrationTeaches edu:SoftwareAgents ;
+    edu:ConcentrationTeaches edu:KnowledgeEngineering .

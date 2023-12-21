@@ -1,0 +1,87 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>.
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#>.
+@prefix edu: <file:///C:/Users/vlada/Desktop/Faks/SW/source/ontology/ontology.ttl#>. # for now, until I see what I will do with it
+
+
+# Classes
+edu:University rdf:type rdf:Class, rdfs:Class .
+edu:Faculty rdf:type rdf:Class, rdfs:Class .
+edu:Department rdf:type rdf:Class, rdfs:Class .
+edu:Concentration rdf:type rdf:Class, rdfs:Class .
+edu:KnowledgeArea rdf:type rdf:Class, rdfs:Class .
+
+
+# Relationships
+edu:FacultyisPartOf rdf:type rdf:Property, rdfs:ObjectProperty ;
+    rdfs:domain edu:Faculty ;
+    rdfs:range edu:University .
+
+edu:DepartmentisPartOf rdf:type rdf:Property, rdfs:ObjectProperty ;
+    rdfs:domain edu:Department ;
+    rdfs:range edu:Faculty .
+
+edu:ConcentrationisPartOf rdf:type rdf:Property, rdfs:ObjectProperty ;
+    rdfs:domain edu:Concentration ;
+    rdfs:range edu:Department .
+
+edu:ConcentrationContinues rdf:type rdf:Property, rdfs:ObjectProperty ;
+    rdfs:domain edu:Concentration ;
+    rdfs:range edu:Concentration .
+
+edu:FacultyTeaches rdf:type rdf:Property, rdfs:ObjectProperty ;
+    rdfs:domain edu:Faculty ;
+    rdfs:range edu:KnowledgeArea .
+
+edu:DepartmentTeaches rdf:type rdf:Property, rdfs:ObjectProperty ;
+    rdfs:domain edu:Department ;
+    rdfs:range edu:KnowledgeArea .
+
+edu:ConcentrationTeaches rdf:type rdf:Property, rdfs:ObjectProperty ;
+    rdfs:domain edu:Concentration ;
+    rdfs:range edu:KnowledgeArea .
+
+
+# Properties
+edu:isNamed rdf:type rdf:Property, rdfs:DatatypeProperty ;
+    rdfs:domain edu:University ;
+    rdfs:domain edu:Faculty ;
+    rdfs:domain edu:Department ;
+    rdfs:domain edu:Concentration ;
+    rdfs:domain edu:KnowledgeArea .
+
+
+edu:isInCity rdf:type rdf:Property, rdfs:DatatypeProperty ;
+    rdfs:domain edu:University .
+
+
+edu:isInCountry rdf:type rdf:Property, rdfs:DatatypeProperty ;
+    rdfs:domain edu:University .
+
+
+edu:isOnStreet rdf:type rdf:Property, rdfs:DatatypeProperty ;
+    rdfs:domain edu:Faculty .
+
+
+edu:hasScholarshipStudents rdf:type rdf:Property, rdfs:DatatypeProperty ;
+    rdfs:domain edu:Department .
+
+
+edu:hasSelfFinancingStudents rdf:type rdf:Property, rdfs:DatatypeProperty ;
+    rdfs:domain edu:Department .
+
+
+edu:hasTuition rdf:type rdf:Property, rdfs:DatatypeProperty ;
+    rdfs:domain edu:Department .
+
+
+edu:hasDuration rdf:type rdf:Property, rdfs:DatatypeProperty ;
+    rdfs:domain edu:Department .
+
+
+edu:hasCalling rdf:type rdf:Property, rdfs:DatatypeProperty ;
+    rdfs:domain edu:Concentration .
+
+
+edu:hasNrOfStudents rdf:type rdf:Property, rdfs:DatatypeProperty ;
+    rdfs:domain edu:Concentration .
+    
