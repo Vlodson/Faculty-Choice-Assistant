@@ -2,10 +2,10 @@
 from openai import OpenAI
 
 
-API_KEY = r"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"
+API_KEY = r"YOUR OPEN AI API KEY HERE"
 CLIENT = OpenAI(api_key=API_KEY)
 
 # assistant made from browser
 ASSISTANT = CLIENT.beta.assistants.retrieve(
-    assistant_id="asst_zXpm82uj8S0tokdy6pEmUp7s"
+    assistant_id="YOUR ASSISTANT ID HERE"
 )

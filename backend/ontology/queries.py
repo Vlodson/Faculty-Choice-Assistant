@@ -12,10 +12,10 @@ def __apply_prefix(query: str) -> str:
     """
     return (
         (
-            r"PREFIX edu: <file:///C:/Users/vlada/Desktop/Faks/SW/source/ontology/ontology.ttl#>"
+            r"PREFIX edu: <YOUR_ONTOLOGY.TTL_FILE_PATH_HERE>"
             + query
         )
-        if r"PREFIX edu: <file:///C:/Users/vlada/Desktop/Faks/SW/source/ontology/ontology.ttl#>"
+        if r"PREFIX edu: <YOUR_ONTOLOGY.TTL_FILE_PATH_HERE>"
         not in query
         else query
     )
