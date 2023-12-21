@@ -11,12 +11,8 @@ def __apply_prefix(query: str) -> str:
     Fallback function if there is no edu prefix
     """
     return (
-        (
-            r"PREFIX edu: <YOUR_ONTOLOGY.TTL_FILE_PATH_HERE>"
-            + query
-        )
-        if r"PREFIX edu: <YOUR_ONTOLOGY.TTL_FILE_PATH_HERE>"
-        not in query
+        (r"PREFIX edu: <YOUR_ONTOLOGY.TTL_FILE_PATH_HERE>" + query)
+        if r"PREFIX edu: <YOUR_ONTOLOGY.TTL_FILE_PATH_HERE>" not in query
         else query
     )
 
@@ -26,7 +22,6 @@ def __fix_prefix(query: str) -> str:
 
 
 def apply_query(query: str) -> Result:
-    print(query)
     return GRAPH.query(query_object=query)
 
 
@@ -44,6 +39,7 @@ def __clean_property_value(val: str) -> str:
 
 # keep in mind there can be ASK and SELECT queries
 # ASK returns a boolean to your question, SELECT returns a Result with ResultRows
+# ASK not implemented, as there should be no ASK queries
 def query_results_to_table(results: Result) -> Dict:
     return {
         __readable_property_name(str(key)): [

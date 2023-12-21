@@ -22,7 +22,7 @@ def send_setup_message(thread: Thread) -> ThreadMessage:
         + "Please review the contents of the file. "
         + "After that each prompt will ask you to create a SPARQL query for a certain question, "
         + "using ONLY information from ontology.ttl. "
-        + "Always add: PREFIX edu: <file:///C:/Users/vlada/Desktop/Faks/SW/source/ontology/ontology.ttl#> to your queries"
+        + "Always add: PREFIX edu: <YOUR_ONTOLOGY.TTL_PATH_HERE> to your queries"
     )
     return CLIENT.beta.threads.messages.create(
         thread_id=thread.id, role="user", content=msg

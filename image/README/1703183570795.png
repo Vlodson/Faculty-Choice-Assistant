@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>RDF Grapher</title>
+
+<style type="text/css">
+body {
+    margin: 1em;
+    font-family: "Nimbus Sans",Arial,sans-serif;
+}
+#logo {
+    float: left;
+    margin: 1em 0em 0em 1em;
+}
+#body {
+    margin: 2em 2em 2em 14em;
+    max-width: 50em;
+}
+h1 {
+    margin-bottom: 1em;
+    font-size: 1.6em;
+}
+td {
+    min-width: 6em;
+}
+#footer {
+    margin: 4em 0 0 0;
+}
+#footer img {
+    padding-right: 30px;
+    border: none;
+}
+</style>
+
+
+<script>
+function determineMethod() {
+    if (document.getElementById("method-post").checked)
+        document.form.method = "post";
+    else
+        document.form.method = "get";
+}
+</script>
+
+</head>
+<body>
+
+<div id="header">
+    <a href="http://www.ldf.fi"><img border="0" width="100px" src="../../img/ldf-logo.png" alt="Linked Data Finland" id="logo"></a>
+</div>
+
+<div id="body">
+
+<h1>RDF Grapher</h1>
+
+<p>RDF grapher is a web service for parsing RDF data and visualizing it as a graph.</p>
+
+<p>The service is based on <a href="http://librdf.org/raptor/rapper.html">Redland Raptor</a> and <a href="http://graphviz.org/">Graphviz</a>.</p>
+
+<p>Supported RDF serialization formats: Turtle, RDF/XML, RDF/JSON, N-Ttriples, TriG, and N-Quads.</p>
+
+<p>Supported image formats: PNG, SVG, PDF, PS, EPS, GIF, and JPG.</p>
+
+<p>
+Usage:
+<br/>
+<tt>http://www.ldf.fi/service/rdf-grapher?rdf=DATA_OR_URI&amp;from=FORMAT&amp;to=FORMAT</tt>
+</p>
+
+<p>GET/POST parameters:</p>
+<table>
+    <tr><td><tt>rdf</tt></td><td>RDF data or URI</td></tr>
+    <tr><td><tt>from</tt></td><td>input serialization format (<tt>ttl</tt>, <tt>xml</tt>, <tt>json</tt>, <tt>nt</tt>, <tt>trig</tt>, <tt>nq</tt>), default: <tt>ttl</tt></td></tr>
+    <tr><td><tt>to</tt></td><td>output image format (<tt>png</tt>, <tt>svg</tt>, <tt>pdf</tt>, <tt>ps</tt>, <tt>eps</tt>, <tt>gif</tt>, <tt>jpg</tt>), default: <tt>png</tt></td></tr>
+</table>
+
+<p>
+Examples:
+<br/>
+<tt>http://www.ldf.fi/service/rdf-grapher?rdf=&lt;http://example.com/s&gt;+&lt;http://example.com/p&gt;+&lt;http://example.com/o&gt;+.&amp;from=ttl&amp;to=png</tt>
+<br/><br/>
+<tt>http://www.ldf.fi/service/rdf-grapher?rdf=http://dbpedia.org/resource/Suomi&amp;from=xml&amp;to=png</tt>
+</p>
+
+<h2>Try the service:</h2>
+
+<form name="form" action="" accept-charset="utf-8" onsubmit="determineMethod();">
+
+RDF data or URI:
+<br/>
+<textarea name="rdf" cols="100" rows="20">
+@prefix ex: <http://example.com/> .
+
+ex:s ex:p ex:o .
+</textarea>
+<br/>
+
+From format:
+<select name="from">
+    <option value="ttl">Turtle</option>
+    <option value="xml">RDF/XML</option>
+    <option value="json">RDF/JSON</option>
+    <option value="nt">N-Triples</option>
+    <option value="trig">TriG</option>
+    <option value="nq">N-Quads</option>
+</select>
+<br/>
+
+To format:
+<select name="to">
+    <option value="png">PNG</option>
+    <option value="svg">SVG</option>
+    <option value="pdf">PDF</option>
+    <option value="ps">PS</option>
+    <option value="eps">EPS</option>
+    <option value="gif">GIF</option>
+    <option value="jpg">JPG</option>
+</select>
+<br/>
+
+Send form as HTTP POST (needed for large RDF data):
+<input type="checkbox" id="method-post"/>
+<br/><br/>
+
+<input type="submit" value="Visualize"/>
+</form>
+
+</div>
+
+<div id="footer">
+    <hr/>
+    <a href="http://seco.cs.aalto.fi" style="border:0px"><img id="seco" alt="Semantic Computing Research Group" src="../../img/seco-logo.png" height="50px"/></a>
+    <a href="http://www.aalto.fi"><img id="aalto" alt="Aalto University" src="../../img/aalto-logo.png" height="50px"/></a>
+    <a href="http://www.cs.helsinki.fi"><img id="uh" alt="University of Helsinki" src="../../img/hy-logo.gif" height="60px"/></a>
+    <a href="http://www.tekes.fi" alt="Tekes"><img id="tekes" src="../../img/tekes-logo.gif" height="30px"/></a>
+</div>
+
+</body>
+</html>
+
